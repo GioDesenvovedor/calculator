@@ -1,7 +1,6 @@
 # Calculator
 
-Este é um projeto de calculadora desenvolvido para Android utilizando a arquitetura MVVM, Room, Coroutines, e com suporte a Snackbars.
-A calculadora possui duas telas, uma para a entrada dos valores e outra para exibição dos registros de operações.
+Este é um projeto de calculadora desenvolvido para Android utilizando a arquitetura MVVM, Room, Coroutines, e com suporte a Snackbars. A calculadora possui duas telas, uma para a entrada dos valores e outra para exibição dos registros de operações.
 
 ## Funcionalidades
 
@@ -28,7 +27,7 @@ A calculadora possui duas telas, uma para a entrada dos valores e outra para exi
 
 O projeto segue o padrão de arquitetura MVVM:
 
-- **Model:** Representa os dados e as regras de negócio. Neste projeto, o modelo é a classe `Calculator`, que armazena as operações realizadas.
+- **Model:** Representa os dados e as regras de negócio. No projeto, o modelo é a classe `Calculator`, que armazena as operações realizadas.
 - **View:** A camada de interface do usuário, gerenciada pelas Activities e Fragments.
 - **ViewModel:** A lógica de interface é separada da View e colocada no `CalculatorViewModel`, que faz a ponte entre os dados do Model e a interface do usuário.
 
@@ -36,7 +35,7 @@ O projeto segue o padrão de arquitetura MVVM:
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/GioDesenvovedor/calculator.git
+    git clone https://github.com/seu-usuario/calculadora-pekus.git
     ```
 2. Abra o projeto no Android Studio.
 3. Certifique-se de que todas as dependências estão corretamente instaladas.
@@ -50,9 +49,15 @@ CalculadoraPekus/
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/com/seuusuario/calculadorapekus/
+│   │   │   │   ├── adapter/             # Adaptadores para RecyclerViews
+│   │   │   │   ├── dao/                 # Interfaces para operações no banco de dados
+│   │   │   │   ├── database/            # Configuração e inicialização do Room Database
+│   │   │   │   ├── listener/            # Interfaces para eventos e ações
 │   │   │   │   ├── model/               # Modelos de dados (Calculator)
-│   │   │   │   ├── view/                # Activities e Fragments
-│   │   │   │   ├── viewmodel/           # ViewModels (CalculatorViewModel)
-│   │   │   ├── res/                     # Arquivos de layout e recursos
-│   │   ├── AndroidManifest.xml
+│   │   │   │   ├── repository/          # Repositórios para manipulação de dados
+│   │   │   │   ├── view/                # Activities e Fragments (Views)
+│   │   │   │   ├── viewHolder/          # ViewHolders para RecyclerViews
+│   │   │   │   ├── viewModel/           # ViewModels (CalculatorViewModel)
+│   │   ├── res/                         # Arquivos de layout e recursos
+│   ├── AndroidManifest.xml
 ├── build.gradle
