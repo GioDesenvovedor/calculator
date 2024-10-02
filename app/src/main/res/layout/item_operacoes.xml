@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_personalizada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:padding="2dp"
+            android:layout_height="60dp">
+
+
+            <TextView
+                android:id="@+id/titleId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Id"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:textColor="#FF201B53"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+               android:id="@+id/titleValorA"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="12dp"
+               android:text="Valor A"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:textColor="#FF201B53"
+                android:textSize="15sp"
+               app:layout_constraintStart_toEndOf="@+id/titleId"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:id="@+id/titleOperacao"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="15dp"
+               android:text="Operação"
+               android:fontFamily="@font/roboto_bold_italic"
+               android:textColor="#FF201B53"
+               android:textSize="15sp"
+               app:layout_constraintStart_toEndOf="@+id/titleValorA"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:id="@+id/titleValorB"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="15dp"
+               android:text="Valor B"
+               android:fontFamily="@font/roboto_bold_italic"
+               android:textColor="#FF201B53"
+               android:textSize="15sp"
+               app:layout_constraintStart_toEndOf="@+id/titleOperacao"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:id="@+id/titleResultado"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="15dp"
+               android:text="Resultado"
+               android:fontFamily="@font/roboto_bold_italic"
+               android:textColor="#FF201B53"
+               android:textSize="15sp"
+               app:layout_constraintStart_toEndOf="@+id/titleValorB"
+               app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data e Hora"
+                android:fontFamily="@font/roboto_bold_italic"
+                android:textColor="#FF201B53"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/titleOperacao"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            </GridView>
+
+
+            <TextView
+                android:id="@+id/txtId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Id"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/titleId"
+                app:layout_constraintStart_toStartOf="@+id/titleId"
+                app:layout_constraintTop_toBottomOf="@+id/titleId" />
+
+            <TextView
+                android:id="@+id/txtValorA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/titleValorA"
+                app:layout_constraintStart_toStartOf="@+id/titleValorA"
+                app:layout_constraintTop_toBottomOf="@+id/titleValorA" />
+
+            <TextView
+                android:id="@+id/txtOperacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" + "
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/titleOperacao"
+                app:layout_constraintStart_toStartOf="@+id/titleOperacao"
+                app:layout_constraintTop_toBottomOf="@+id/titleOperacao" />
+
+            <TextView
+                android:id="@+id/txtValorB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/titleValorB"
+                app:layout_constraintStart_toStartOf="@+id/titleValorB"
+                app:layout_constraintTop_toBottomOf="@+id/titleValorB" />
+
+            <TextView
+                android:id="@+id/txtResultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/titleResultado"
+                app:layout_constraintStart_toStartOf="@+id/titleResultado"
+                app:layout_constraintTop_toBottomOf="@+id/titleResultado" />
+
+            <TextView
+                android:id="@+id/txtData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/titleData"
+                app:layout_constraintStart_toStartOf="@+id/titleData"
+                app:layout_constraintTop_toBottomOf="@+id/titleData" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
